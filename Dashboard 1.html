@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Personalized Assistant</h1>
+        </header>
+        <section class="widgets">
+            <div class="widget" id="weather">
+                <h2>Weather</h2>
+                <p id="weather-info">Loading...</p>
+            </div>
+            <div class="widget" id="todo">
+                <h2>To-Do List</h2>
+                <ul id="todo-list"></ul>
+                <input type="text" id="todo-input" placeholder="Add a task">
+                <button id="add-todo">Add</button>
+            </div>
+            <div class="widget" id="notes">
+                <h2>Notes</h2>
+                <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
+            </div>
+        </section>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
