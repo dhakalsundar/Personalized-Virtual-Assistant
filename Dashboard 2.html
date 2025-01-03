@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Your Personal Assistant</h1>
+        </header>
+        <section class="widgets">
+            <div class="widget" id="profile">
+                <h2>User Profile</h2>
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+                <p id="user-name">John Doe</p>
+                <p id="user-role">Assistant User</p>
+            </div>
+            <div class="widget" id="weather">
+                <h2>Weather</h2>
+                <p id="weather-info">Loading...</p>
+            </div>
+            <div class="widget" id="calendar">
+                <h2>Calendar</h2>
+                <p id="date">Loading date...</p>
+                <p id="time">Loading time...</p>
+            </div>
+            <div class="widget" id="todo">
+                <h2>To-Do List</h2>
+                <ul id="todo-list"></ul>
+                <div class="todo-controls">
+                    <input type="text" id="todo-input" placeholder="Add a task">
+                    <button id="add-todo">Add</button>
+                </div>
+            </div>
+            <div class="widget" id="notes">
+                <h2>Notes</h2>
+                <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
+            </div>
+            <div class="widget" id="activity-tracker">
+                <h2>Activity Tracker</h2>
+                <p>Steps today: <span id="steps-count">0</span></p>
+                <button id="add-step">Add Step</button>
+            </div>
+            <div class="widget" id="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                    <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
