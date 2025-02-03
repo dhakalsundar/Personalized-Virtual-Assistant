@@ -1,7 +1,7 @@
-// Import required Firebase modules
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
+// Using require() instead of import
+const { initializeApp } = require('firebase/app');
+const { getAuth, createUserWithEmailAndPassword, updateProfile } = require('firebase/auth');
+const { getDatabase, ref, set } = require('firebase/database');
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -22,7 +22,7 @@ const database = getDatabase(app);
 // Handle Form Submission
 document.getElementById('signupForm').addEventListener('submit', async (e) => {
   e.preventDefault();
-
+  
   const username = document.getElementById('username').value;
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
