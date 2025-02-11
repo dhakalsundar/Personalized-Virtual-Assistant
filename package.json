@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "signup-backend",
   "version": "1.0.0",
   "description": "A backend for user sign-up using Firebase",
@@ -13,4 +14,9 @@
   "type": "module",
   "author": "",
   "license": "ISC"
+=======
+  "dependencies": {
+    "firebase": "^11.2.0"
+  }
+>>>>>>> 1156388e2793eedc799f3e3f9c7f9b673f98747b
 }
