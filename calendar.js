@@ -94,4 +94,3 @@ window.addEventListener("click", (e) => {
 });
 
 renderCalendar();
-
