@@ -1,3 +1,4 @@
+
 // Select the form and message elements
 const form = document.getElementById("signup-form");
 const message = document.getElementById("message");
