@@ -1,3 +1,4 @@
+
      
      document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
         link.addEventListener('click', function (event) {
@@ -55,7 +56,6 @@
         document.getElementById('task-title').value = '';
         document.getElementById('task-desc').value = '';
     });
-
 
 
 
