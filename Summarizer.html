@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="Summarizer.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Add this line to include Axios -->
+
+</head>
+<body>
+    <div class="container">
+        <h1>Text Summarizer</h1>
+        <textarea id="inputText" placeholder="Paste your text here..." autofocus></textarea>
+        
+        <!-- Dropdown for Summary Length -->
+        <label for="summaryLength">Select Summary Length:</label>
+        <select id="summaryLength">
+            <option value="short"selected> Short (20 words)</option>
+            <option value="medium">Medium (60 words)</option>
+            <option value="long">Long (> 100 words)</option>
+        </select>
+        
+        <button onclick="summarizeText()">Summarize</button>
+        
+        <div id="summaryContainer">
+            <h2>Summary:</h2>
+            <p id="summary">Your summarized text will appear here.</p>
+        </div>
+    </div>
+    
+    <script src="Summarizer.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(#F1FAFF, #CBE4FF);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background: #151A2D;
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 16px;
+}
+
+/* When collapsed, slide sidebar out */
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sidebar-header .header-logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #fff;
+  color: #151A2D;
+}
+
+.nav-icon {
+  margin-right: 12px;
+}
+
+/* Main Content */
+#content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-left: 270px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+
+/* Sidebar Toggle Button */
+.toggler {
+  background: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.toggler:hover {
+  background: #dde4fb;
+}
+
+
+/* Default sidebar styles */
+.sidebar {
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+/* Hide text when sidebar is collapsed */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Hide nav-label (text) when sidebar is collapsed */
+.sidebar.collapsed .nav-label {
+  display: none;
+}
+
+/* Center icons when collapsed */
+.sidebar.collapsed .nav-icon {
+  display: block;
+  text-align: center;
+}
+
+/* Adjust for better alignment */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.nav-icon {
+  font-size: 24px;
+}
+
+
+.sidebar-toggler {
+  transition: transform 0.3s ease;
+}
+.sidebar.collapsed .sidebar-header {
+  padding-bottom: 20px; /* Adjust as needed */
+}
+.sidebar.collapsed .sidebar-toggler {
+  transform: translate(-40px, 50px);  /* Move 20px right and 50px down */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  #content {
+    margin-left: 200px;
+  }
+
+  .sidebar.collapsed + #content {
+    margin-left: 0;
+  }
+}

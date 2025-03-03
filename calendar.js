@@ -1,13 +1,9 @@
-
-
-const calendarContainer = document.getElementById("calendar-container");
 const calendarGrid = document.getElementById("calendar-grid");
 const currentMonthEl = document.getElementById("current-month");
 const prevMonthBtn = document.getElementById("prev-month");
 const nextMonthBtn = document.getElementById("next-month");
-
 const modal = document.getElementById("event-modal");
-const closeModal = document.getElementById("close-modal");
+const closeModal = document.getElementById("close-modalcal");
 const eventDateEl = document.getElementById("event-date");
 const eventInput = document.getElementById("event-input");
 const saveEventBtn = document.getElementById("save-event");
@@ -18,6 +14,7 @@ let currentDate = new Date();
 function renderCalendar() {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
+  const today = new Date();
 
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -45,6 +42,18 @@ function renderCalendar() {
       eventEl.classList.add("event");
       eventEl.textContent = events[dateKey];
       dayCell.appendChild(eventEl);
+    }
+
+    if (
+      day === today.getDate() &&
+      month === today.getMonth() &&
+      year === today.getFullYear()
+    ) {
+      dayCell.classList.add("current-day");
+    }
+
+    if (new Date(year, month, day).getDay() === 6) {
+      dayCell.classList.add("holiday");
     }
 
     dayCell.addEventListener("click", () => openModal(dateKey));
@@ -95,4 +104,3 @@ window.addEventListener("click", (e) => {
 });
 
 renderCalendar();
-
