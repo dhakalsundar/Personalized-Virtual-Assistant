@@ -1,3 +1,5 @@
+
+
 const calendarContainer = document.getElementById("calendar-container");
 const calendarGrid = document.getElementById("calendar-grid");
 const currentMonthEl = document.getElementById("current-month");
@@ -93,3 +95,4 @@ window.addEventListener("click", (e) => {
 });
 
 renderCalendar();
+
