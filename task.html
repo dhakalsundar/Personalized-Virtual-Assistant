@@ -3,84 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Assistant</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>RTASKS Table</title>
+    <link rel="stylesheet" href="task.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h2>Virtual Assistant</h2>
-            <ul>
-                <li class="active">
-                    <a href="#">
-                        <i class="fas fa-tasks"></i> <!-- Icon name: fas fa-tasks -->
-                        Tasks
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-envelope"></i> <!-- Icon name: fas fa-envelope -->
-                        Messages
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-list"></i> <!-- Icon name: fas fa-list -->
-                        To-Do List
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user"></i> <!-- Icon name: fas fa-user -->
-                        Profile
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-calendar-alt"></i> <!-- Icon name: fas fa-calendar-alt -->
-                        Calendar
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-cog"></i> <!-- Icon name: fas fa-cog -->
-                        Settings
-                    </a>
-                </li>
-            </ul>
+    <h2>TASKS Table <button class="add-task" onclick="openAddModal()">Add New Task</button></h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Priority</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="taskTableBody">
+            <!-- Dynamic task rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addTaskModal')">&times;</span>
+            <h3 id="addModalTitle">Add Task</h3>
+            <label>Task Name: <input type="text" id="addTaskName"></label><br>
+            <label>Priority: <select id="addTaskPriority">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select></label><br>
+            <label>Due Date: <input type="date" id="addTaskDate"></label><br>
+            <label>Status: <select id="addStatus">
+                <option>Pending</option>
+                <option>Completed</option>
+                <option>Overdue</option>
+            </select></label><br>
+            <button onclick="addTask()">Save Task</button>
         </div>
-        
-        <!-- Main Content -->
-        <div class="main-content">
-            <div class="header">
-                <h1>Tasks</h1>
-            </div>
-            <div class="sub-header">
-                <p>Your Task list</p>
-            </div>
-            <div class="tasks">
-                <div class="task-card">
-                    <div class="task-image"></div>
-                    <p>Task 1<br><span>Due 15feb2025</span></p>
-                </div>
-                <div class="task-card">
-                    <div class="task-image"></div>
-                    <p>Task 2<br><span>Due 15feb2025</span></p>
-                </div>
-                <div class="task-card">
-                    <div class="task-image"></div>
-                    <p>Task 3<br><span>Due 15feb2025</span></p>
-                </div>
-                <div class="task-card">
-                    <div class="task-image"></div>
-                    <p>Task 4<br><span>Due 15feb2025</span></p>
-                </div>
-            </div>
+    </div>
+
+    <div id="editTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editTaskModal')">&times;</span>
+            <h3 id="editModalTitle">Edit Task</h3>
+            <label>Task Name: <input type="text" id="editTaskName"></label><br>
+            <label>Priority: <select id="editTaskPriority">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select></label><br>
+            <label>Due Date: <input type="date" id="editTaskDate"></label><br>
+            <label>Status: <select id="editStatus">
+                <option>Pending</option>
+                <option>Completed</option>
+                <option>Overdue</option>
+            </select></label><br>
+            <input type="hidden" id="editTaskId">
+            <button onclick="saveEditedTask()">Save Changes</button>
         </div>
     </div>
     
+
+    <script src="task.js"></script>
 </body>
 </html>

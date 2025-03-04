@@ -1,22 +1,7 @@
 {
-<<<<<<< HEAD
-  "name": "signup-backend",
-  "version": "1.0.0",
-  "description": "A backend for user sign-up using Firebase",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
   "dependencies": {
-    "firebase": "^11.2.0"
-  },
-  "type": "module",
-  "author": "",
-  "license": "ISC"
-=======
-  "dependencies": {
-    "firebase": "^11.2.0"
+    "@cloudinary/url-gen": "^1.21.0",
+    "cloudinary": "^2.5.1",
+    "firebase": "^11.3.0"
   }
->>>>>>> 1156388e2793eedc799f3e3f9c7f9b673f98747b
 }

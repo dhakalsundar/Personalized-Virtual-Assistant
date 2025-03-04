@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Assistant</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="calendar.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+
+ 
+</head>
+<body>
+  <div id="toast-container"></div>
+
+  <div class="wrapper" id="dashboard-page">
+    <aside class="sidebar">
+      <!-- Sidebar header -->
+      <header class="sidebar-header">
+        <a href="#" class="header-logo">
+          <img src="chatlogo.png" alt="CodingNepal">
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+    
+      </header>
+      <nav class="sidebar-nav">
+        <!-- Primary top nav -->
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="#dashboard" class="nav-link" onclick="loadPage('Home.html')">
+                <span class="nav-icon material-symbols-rounded">dashboard</span>
+                <span class="nav-label">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#todo" class="nav-link" onclick="loadPage('Task.html')">
+                <span class="nav-icon material-symbols-rounded">check_circle</span>
+                <span class="nav-label">Task</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#calendar" class="nav-link" onclick="loadPage('calendar.html')">
+                <span class="nav-icon material-symbols-rounded">calendar_today</span>
+                <span class="nav-label">Calendar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a href="#summary" class="nav-link" onclick="loadPage('Summarizer.html', event)">
+              <span class="nav-icon material-symbols-rounded">summarize</span>
+              <span class="nav-label">Summary</span>
+          </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="#search" class="nav-link" onclick="loadPage('GoogleSearch.html', event)">
+            <span class="nav-icon material-symbols-rounded">search</span>
+            <span class="nav-label">Search</span>
+        </a>
+    </li>
+    
+        <li class="nav-item">
+            <a href="#editprofile" class="nav-link" onclick="loadPage('editprofile.html', event)">
+                <span class="nav-icon material-symbols-rounded">person_outline</span>
+                <span class="nav-label">Edit Profile</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link" onclick="logoutUser()">
+              <span class="nav-icon material-symbols-rounded">logout</span>
+              <span class="nav-label">Logout</span>
+          </a>
+      </li>
+      
+        
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Content area -->
+    <div id="content">
+    
+    
+  </div>
+  </div>
+
+
+  <script src ="dashboard.js"></script>
+ 
+</body>
+</html>
