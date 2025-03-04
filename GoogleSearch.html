@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Search Engine</title>
+  <link rel="stylesheet" href="GoogleSearch.css">
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search anything..." onkeyup="handleSearch(event)">
+    <button onclick="search()">🔍 Search</button>
+  
+
+    <!-- Button to search on Google -->
+    <button onclick="searchOnGoogle()">🔎 Search on Google</button>
+
+    <!-- Section to display search results -->
+    <div id="searchResults"></div>
+  </div>
+
+  <script src="GoogleSearch.js"></script>
+</body>
+</html>

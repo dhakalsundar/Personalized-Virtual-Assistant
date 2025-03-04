@@ -1,0 +1,79 @@
+
+.container {
+    margin: auto;
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* Bright gradient background */
+    width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center; /* Center text for a more cohesive look */
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fff; /* White border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.weather, .time {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.weather:hover, .time:hover {
+    background: rgba(255, 255, 255, 1); /* Solid white on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+h2 {
+    margin: 0 0 10px;
+    color: #333; /* Darker text for headings */
+}
+
+p {
+    margin: 5px 0;
+    color: #555; /* Slightly lighter text for paragraphs */
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}

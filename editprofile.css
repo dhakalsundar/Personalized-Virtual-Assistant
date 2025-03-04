@@ -1,0 +1,105 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.profile-pic-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-container {
+    margin-left: 200px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-pic-preview {
+    
+    width: 200px; /* Adjust to desired size */
+    height: 200px; /* Adjust to desired size */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 50%; /* Make it circular */
+    margin-bottom: 10px;
+}
+
+#file-input {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#profile-pic-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4facfe;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #4facfe;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    background: #4facfe;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #00c6ff;
+}
+
+.upload-btn {
+    background: #28a745;
+}
+
+.upload-btn:hover {
+    background: #218838;
+}
