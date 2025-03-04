@@ -1,22 +1,27 @@
 {
-<<<<<<< HEAD
-  "name": "signup-backend",
+  "name": "sundar",
   "version": "1.0.0",
-  "description": "A backend for user sign-up using Firebase",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "test": "jest",
+    "start": "node server.js"
   },
-  "dependencies": {
-    "firebase": "^11.2.0"
-  },
-  "type": "module",
+  "keywords": [],
   "author": "",
-  "license": "ISC"
-=======
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "firebase": "^11.2.0"
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.3.1",
+    "firebase-admin": "^13.1.0",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
->>>>>>> 1156388e2793eedc799f3e3f9c7f9b673f98747b
 }
